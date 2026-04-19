@@ -1,0 +1,37 @@
+﻿using MatchResultBackend.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace MatchResultBackend.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class MatchController : Controller
+    {
+        private readonly List<MatchModel> matches;
+
+        public MatchController()
+        {
+            matches = new List<MatchModel>
+            {
+                new MatchModel { Team1 = "ETO", Team2 = "Fradi", Score1 = 3, Score2 = 1 },
+                new MatchModel { Team1 = "ETO", Team2 = "Debrecen", Score1 = 2, Score2 = 2 },
+                new MatchModel { Team1 = "Fehérvár", Team2 = "Fradi", Score1 = 3, Score2 = 4 },
+                new MatchModel { Team1 = "Nagykanizsa", Team2 = "Kisvárda", Score1 = 3, Score2 = 6 },
+                new MatchModel { Team1 = "Kispest", Team2 = "Győrszentiván", Score1 = 7, Score2 = 3 }
+            };
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(matches);
+        }
+
+        [HttpPost]
+        public IActionResult AddMatch(MatchModel match)
+        {
+            matches.Add(match);
+            return Ok(match);
+        }
+    }
+}

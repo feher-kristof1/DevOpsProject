@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "MatchResultBackend.Controllers.MatchController",
+    "Method": "GetAll",
+    "RelativePath": "api/Match",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MatchResultBackend.Controllers.MatchController",
+    "Method": "AddMatch",
+    "RelativePath": "api/Match",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "match",
+        "Type": "MatchResultBackend.Models.MatchModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
