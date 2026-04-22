@@ -9,6 +9,6 @@ export class ResultService {
   constructor(private http: HttpClient) {}
   
   public getResults() {
-    return this.http.get<ResultModel[]>('http://localhost:5069/api/Match');
+    return this.http.get<ResultModel[]>('/api/Match');
   }
 }
