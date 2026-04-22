@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\MatchResultBackend\\",
+  "WorkspaceRootPath": "D:\\DevOpsProject\\MatchResultBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|d:\\matchresultbackend\\matchresultbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|solutionrelative:matchresultbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|d:\\devopsproject\\matchresultbackend\\matchresultbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|solutionrelative:matchresultbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|d:\\matchresultbackend\\models\\matchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|solutionrelative:models\\matchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|d:\\devopsproject\\matchresultbackend\\models\\matchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|solutionrelative:models\\matchmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|d:\\matchresultbackend\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|solutionrelative:controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|d:\\devopsproject\\matchresultbackend\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|solutionrelative:controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|d:\\matchresultbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D575A103-901F-41CB-B5DA-91C95754287C}|MatchResultBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|d:\\devopsproject\\matchresultbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43FE0EDF-DAC2-F729-E551-93A85E8FCF29}|MatchResultBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,12 +31,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MatchResultBackend",
-              "DocumentMoniker": "D:\\MatchResultBackend\\MatchResultBackend.csproj",
+              "Title": "MatchResultBackend.csproj",
+              "DocumentMoniker": "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj",
               "RelativeDocumentMoniker": "MatchResultBackend.csproj",
-              "ToolTip": "D:\\MatchResultBackend\\MatchResultBackend.csproj",
+              "ToolTip": "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj",
               "RelativeToolTip": "MatchResultBackend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-04-18T14:17:06.571Z",
               "EditorCaption": ""
@@ -45,40 +45,37 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MatchModel.cs",
-              "DocumentMoniker": "D:\\MatchResultBackend\\Models\\MatchModel.cs",
+              "DocumentMoniker": "D:\\DevOpsProject\\MatchResultBackend\\Models\\MatchModel.cs",
               "RelativeDocumentMoniker": "Models\\MatchModel.cs",
-              "ToolTip": "D:\\MatchResultBackend\\Models\\MatchModel.cs",
+              "ToolTip": "D:\\DevOpsProject\\MatchResultBackend\\Models\\MatchModel.cs",
               "RelativeToolTip": "Models\\MatchModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T13:58:52.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T13:58:52.669Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MatchController.cs",
-              "DocumentMoniker": "D:\\MatchResultBackend\\Controllers\\MatchController.cs",
+              "DocumentMoniker": "D:\\DevOpsProject\\MatchResultBackend\\Controllers\\MatchController.cs",
               "RelativeDocumentMoniker": "Controllers\\MatchController.cs",
-              "ToolTip": "D:\\MatchResultBackend\\Controllers\\MatchController.cs",
+              "ToolTip": "D:\\DevOpsProject\\MatchResultBackend\\Controllers\\MatchController.cs",
               "RelativeToolTip": "Controllers\\MatchController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T13:57:19.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T13:57:19.189Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\MatchResultBackend\\Program.cs",
+              "DocumentMoniker": "D:\\DevOpsProject\\MatchResultBackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\MatchResultBackend\\Program.cs",
+              "ToolTip": "D:\\DevOpsProject\\MatchResultBackend\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T13:54:39.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T13:54:39.195Z"
             }
           ]
         }

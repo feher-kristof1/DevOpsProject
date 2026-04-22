@@ -1,0 +1,19 @@
+<div class="w-[75%] h-[5%] block text-center px-2">
+    @for (r of results; track $index) {
+    @if (r.score1 > r.score2) {
+    <div class="w-fit rounded-sm p-1 bg-linear-90 from-green-500 to-red-500 text-gray-700 border-b-black m-2">
+        <h1>{{ r.team1 }} | {{ r.score1 }} - {{ r.score2 }} | {{ r.team2 }}</h1>
+    </div>
+    }
+    @else if (r.score1 < r.score2) { 
+        <div class="w-fit rounded-sm p-1 bg-linear-90 from-red-500 to-green-500 text-gray-700 border-b-black m-2">
+            <h1>{{ r.team1 }} | {{ r.score1 }} - {{ r.score2 }} | {{ r.team2 }}</h1>
+        </div>
+    }
+    @else {
+        <div class="w-fit rounded-sm p-1 bg-linear-90 from-yellow-500 to-orange-500 text-gray-700 border-b-black m-2">
+            <h1>{{ r.team1 }} | {{ r.score1 }} - {{ r.score2 }} | {{ r.team2 }}</h1>
+        </div>
+    }
+}
+</div>

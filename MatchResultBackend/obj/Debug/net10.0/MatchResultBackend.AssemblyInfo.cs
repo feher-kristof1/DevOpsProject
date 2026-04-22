@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatchResultBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ba0049d0477d7231246a39ec28821b311af2b97")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatchResultBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatchResultBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

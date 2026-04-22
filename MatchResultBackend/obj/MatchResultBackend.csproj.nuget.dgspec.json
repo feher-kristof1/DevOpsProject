@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MatchResultBackend\\MatchResultBackend.csproj": {}
+    "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj": {}
   },
   "projects": {
-    "D:\\MatchResultBackend\\MatchResultBackend.csproj": {
+    "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MatchResultBackend\\MatchResultBackend.csproj",
+        "projectUniqueName": "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj",
         "projectName": "MatchResultBackend",
-        "projectPath": "D:\\MatchResultBackend\\MatchResultBackend.csproj",
+        "projectPath": "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj",
         "packagesPath": "C:\\Users\\Kristóf\\.nuget\\packages\\",
-        "outputPath": "D:\\MatchResultBackend\\obj\\",
+        "outputPath": "D:\\DevOpsProject\\MatchResultBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
