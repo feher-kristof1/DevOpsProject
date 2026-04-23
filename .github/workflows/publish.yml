@@ -1,4 +1,4 @@
-name: Docker Image CI & publish to K8S (frontend + backend)
+name: K8S
 
 on:
   push:
