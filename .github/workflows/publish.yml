@@ -2,9 +2,9 @@ name: Docker Image CI & publish to K8S (frontend + backend)
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
   workflow_dispatch:
 

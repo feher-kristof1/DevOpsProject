@@ -2,9 +2,9 @@ name: Docker Publish (frontend + backend)
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
   # lehetővé teszi, hogy "kézzel" elindítsam a folyamatot
   workflow_dispatch:
