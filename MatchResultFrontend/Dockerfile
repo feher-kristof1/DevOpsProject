@@ -11,6 +11,6 @@ RUN npm run build -- --configuration production --output-path=./MatchResultFront
 	&& ls -la /app || true
 
 FROM nginx:alpine
-COPY --from=build /app/dist/MatchResultFrontend /usr/share/nginx/html
+COPY --from=build /app/MatchResultFrontend /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
