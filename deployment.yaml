@@ -1,0 +1,130 @@
+# kubectl create secret docker-registry ghcr-auth-token --docker-server=ghcr.io --docker-username=bognarpal --docker-password=<TOKEN>
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matchresult-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: matchresult-frontend
+  template:
+    metadata:
+      labels:
+        app: matchresult-frontend
+    spec:
+      containers:
+        - name: matchresult-frontend-container
+          image: ghcr.io/feher-kristof1/matchresult-frontend:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: BACKEND_URL
+              value: "http://matchresult-backend-service"
+      imagePullSecrets:
+        - name: ghcr-auth-token
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: matchresult-frontend-service
+spec:
+  selector:
+    app: matchresult-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matchresult-backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: matchresult-backend
+  template:
+    metadata:
+      labels:
+        app: matchresult-backend
+    spec:
+      containers:
+        - name: matchresult-backend-container
+          image: ghcr.io/feher-kristof1/matchresult-backend:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: ASPNETCORE_URLS
+              value: "http://+:80"
+      imagePullSecrets:
+        - name: ghcr-auth-token
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: matchresult-backend-service
+spec:
+  selector:
+    app: matchresult-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: match-certificate
+spec:
+  secretName: match-certificate
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - matchresult-feher-krsitof1.jcloud.jedlik.cloud
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: matchresult-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - matchresult-feher-krsitof1.jcloud.jedlik.cloud
+      secretName: match-certificate
+
+  rules:
+    - host: matchresult-feher-krsitof1.jcloud.jedlik.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: matchresult-frontend-service
+                port:
+                  number: 80
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: matchresult-backend-service
+                port:
+                  number: 80

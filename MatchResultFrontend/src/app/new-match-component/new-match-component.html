@@ -1,0 +1,7 @@
+<form (onsubmit)="newMatch()">
+    <input type="text" placeholder="Home Team" [(ngModel)]="homeTeam">
+    <input type="text" placeholder="Away Team" [(ngModel)]="awayTeam">
+    <input type="number" placeholder="Home Score" [(ngModel)]="homeScore">
+    <input type="number" placeholder="Away Score" [(ngModel)]="awayScore">
+    <button type="submit">Record match</button>
+</form>

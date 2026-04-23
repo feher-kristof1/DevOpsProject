@@ -1,3 +1,4 @@
+<button (click)="newMatch()">Refresh Results</button>
 <div class="w-[75%] h-[5%] block text-center px-2">
     @for (r of results; track $index) {
     @if (r.score1 > r.score2) {

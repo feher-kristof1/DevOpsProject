@@ -1,6 +1,8 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { ResultService } from '../result-service';
 import ResultModel from '../models/ResultModel';
+import { MatDialog } from '@angular/material/dialog';
+import { NewMatchComponent } from '../new-match-component/new-match-component';
 
 @Component({
   selector: 'app-result-component',
@@ -9,7 +11,7 @@ import ResultModel from '../models/ResultModel';
   styleUrl: './result-component.css',
 })
 export class ResultComponent {
-  constructor(private resultService: ResultService, private cdr:ChangeDetectorRef) {}
+  constructor(private resultService: ResultService, private cdr:ChangeDetectorRef, private dialog: MatDialog) {}
 
   results:ResultModel[] = [];
 
@@ -25,5 +27,13 @@ export class ResultComponent {
         alert('Error fetching results: ' + err.message);
       }
     });
+  }
+
+  newMatch(){
+    this.dialog.open(NewMatchComponent,{
+        width: '400px',
+        height: '300px'
+        
+    })
   }
 }

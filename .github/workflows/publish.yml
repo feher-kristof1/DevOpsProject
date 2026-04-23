@@ -1,0 +1,60 @@
+name: Docker Image CI & publish to K8S (frontend + backend)
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: genarate image tag
+      run: |
+        echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
+
+    - uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Login to GHCR
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCR_TOKEN }}
+
+    - name: Build and push frontend
+      run: |
+        docker build -t ghcr.io/feher-kristof1/matchresult-frontend:$IMAGE_TAG ./MatchResultFrontend
+        docker push ghcr.io/feher-kristof1/matchresult-frontend:$IMAGE_TAG
+
+    - name: Build and push backend
+      run: |
+        docker build -t ghcr.io/feher-kristof1/matchresult-backend:$IMAGE_TAG ./MatchResultBackend
+        docker push ghcr.io/feher-kristof1/matchresult-backend:$IMAGE_TAG
+
+    - name: Update deployment.yaml image tags
+      run: |
+        sed -i 's|image: ghcr.io/feher-kristof1/matchresult-frontend:.*|image: ghcr.io/feher-kristof1/matchresult-frontend:'"$IMAGE_TAG"'|' deployment.yaml || true
+        sed -i 's|image: ghcr.io/feher-kristof1/matchresult-backend:.*|image: ghcr.io/feher-kristof1/matchresult-backend:'"$IMAGE_TAG"'|' deployment.yaml || true
+
+    - name: Create K8s config and apply
+      env:
+        KUBECONFIG_DATA: ${{ secrets.JEDLIK_K8S_CONFIG }}
+      run: |
+        mkdir -p ~/.kube
+        echo "$KUBECONFIG_DATA" | base64 --decode > ~/.kube/config
+        kubectl apply -f deployment.yaml
+
+
