@@ -1,9 +1,11 @@
-FROM node:18-alpine AS build
+FROM node:18-bullseye-slim AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --silent
+# use legacy-peer-deps to avoid peer dependency resolution failures in CI
+RUN npm ci --legacy-peer-deps --silent
 COPY . .
-RUN npm run build --configuration production
+# pass flags to the script with `--` so they reach the underlying CLI
+RUN npm run build -- --configuration production --verbose
 
 FROM nginx:alpine
 COPY --from=build /app/dist/MatchResultFrontend /usr/share/nginx/html
