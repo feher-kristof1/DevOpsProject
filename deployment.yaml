@@ -1,4 +1,4 @@
-# kubectl create secret docker-registry ghcr-auth-token --docker-server=ghcr.io --docker-username=bognarpal --docker-password=<TOKEN>
+
 
 apiVersion: apps/v1
 kind: Deployment

@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  # lehetővé teszi, hogy "kézzel" elindítsam a folyamatot
+
   workflow_dispatch:
 
 permissions:
@@ -67,11 +67,7 @@ jobs:
         kubectl apply -f deployment.yaml
 
 
-# config fájl base64-be kódolása
-# $bytes = [System.IO.File]::ReadAllBytes("$env:USERPROFILE/.kube/config")
-# [System.Convert]::ToBase64String($bytes)
 
-# -> elmentettük egy JEDLIK_K8S_CONFIG secretbe
 
 
 
