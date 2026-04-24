@@ -1,4 +1,4 @@
-FROM node:18-bullseye-slim AS build
+FROM node:22-bullseye-slim AS build
 WORKDIR /app
 COPY package*.json ./
 # use legacy-peer-deps to avoid peer dependency resolution failures in CI
