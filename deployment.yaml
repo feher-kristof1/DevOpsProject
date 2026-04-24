@@ -23,7 +23,7 @@ spec:
             - name: BACKEND_URL
               value: "http://matchresult-backend-service"
       imagePullSecrets:
-        - name: ghcr-auth-token
+        - name: PAT
 
 ---
 
@@ -64,7 +64,7 @@ spec:
             - name: ASPNETCORE_URLS
               value: "http://+:80"
       imagePullSecrets:
-        - name: ghcr-auth-token
+        - name: PAT
 
 ---
 
