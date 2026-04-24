@@ -114,17 +114,17 @@ spec:
     - host: matchresult-feher-kristof1.jcloud.jedlik.cloud
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: matchresult-frontend-service
-                port:
-                  number: 80
           - path: /api
             pathType: Prefix
             backend:
               service:
                 name: matchresult-backend-service
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: matchresult-frontend-service
                 port:
                   number: 80
