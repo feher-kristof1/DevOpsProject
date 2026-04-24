@@ -11,6 +11,6 @@ RUN npm run build -- --configuration production --verbose \
 	&& find /app/dist -maxdepth 4 -type f | sort || true
 
 FROM nginx:alpine
-COPY --from=build /app/dist/MatchResultFrontend/browser /usr/share/nginx/html
+COPY --from=build /app/dist/match-result-frontend/browser /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
