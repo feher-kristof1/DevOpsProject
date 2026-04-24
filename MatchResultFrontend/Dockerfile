@@ -6,11 +6,11 @@ RUN npm ci --legacy-peer-deps --silent
 COPY . .
 
 # build the Angular app into a known output folder
-RUN npm run build -- --configuration production --output-path=./MatchResultFrontend --verbose \
+RUN npm run build -- --configuration production --verbose \
 	&& echo "Dist contents:" \
-	&& ls -la /app || true
+	&& find /app/dist -maxdepth 4 -type f | sort || true
 
 FROM nginx:alpine
-COPY --from=build /app/MatchResultFrontend /usr/share/nginx/html
+COPY --from=build /app/dist/MatchResultFrontend/browser /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
