@@ -8,9 +8,10 @@ COPY . .
 # build the Angular app into a known output folder
 RUN npm run build -- --configuration production --output-path=dist/matchresultfrontend --verbose \
 	&& echo "Dist contents:" \
-	&& find /app/dist -maxdepth 4 -type f | sort || true
+	&& find /app/dist -maxdepth 4 -type f | sort \
+	&& test -d /app/dist/matchresultfrontend/browser
 
 FROM nginx:alpine
-COPY --from=build /app/dist/matchresultfrontend /usr/share/nginx/html
+COPY --from=build /app/dist/matchresultfrontend/browser /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
