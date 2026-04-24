@@ -92,7 +92,7 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-    - matchresult-feher-krsitof1.jcloud.jedlik.cloud
+    - matchresult-feher-kristof1.jcloud.jedlik.cloud
 
 ---
 
@@ -107,11 +107,11 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - matchresult-feher-krsitof1.jcloud.jedlik.cloud
+        - matchresult-feher-kristof1.jcloud.jedlik.cloud
       secretName: match-certificate
 
   rules:
-    - host: matchresult-feher-krsitof1.jcloud.jedlik.cloud
+    - host: matchresult-feher-kristof1.jcloud.jedlik.cloud
       http:
         paths:
           - path: /

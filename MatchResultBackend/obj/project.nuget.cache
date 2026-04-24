@@ -1,16 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XU99F1FjCvA=",
+  "dgSpecHash": "+/IUO5n3Lb4=",
   "success": true,
-  "projectFilePath": "D:\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Kristóf\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\Kristóf\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
-    "C:\\Users\\Kristóf\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512",
-    "C:\\Users\\Kristóf\\.nuget\\packages\\swashbuckle.aspnetcore\\6.7.0\\swashbuckle.aspnetcore.6.7.0.nupkg.sha512",
-    "C:\\Users\\Kristóf\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.7.0\\swashbuckle.aspnetcore.swagger.6.7.0.nupkg.sha512",
-    "C:\\Users\\Kristóf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.7.0\\swashbuckle.aspnetcore.swaggergen.6.7.0.nupkg.sha512",
-    "C:\\Users\\Kristóf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.7.0\\swashbuckle.aspnetcore.swaggerui.6.7.0.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Feher Kistof\\DevOpsProject\\MatchResultBackend\\MatchResultBackend.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
