@@ -6,7 +6,7 @@ RUN npm ci --legacy-peer-deps --silent
 COPY . .
 
 # build the Angular app into a known output folder
-RUN npm run build -- --configuration production --verbose \
+RUN npm run build -- --configuration production --output-path=dist/matchresultfrontend --verbose \
 	&& echo "Dist contents:" \
 	&& find /app/dist -maxdepth 4 -type f | sort || true
 
