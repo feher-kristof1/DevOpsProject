@@ -34,12 +34,12 @@ jobs:
 
     - name: Build and push frontend
       run: |
-        docker build -t ghcr.io/feher-kristof1/matchresult-frontend:$IMAGE_TAG ./MatchResultFrontend
+        docker build -f ./MatchResultFrontend/Dockerfile -t ghcr.io/feher-kristof1/matchresult-frontend:$IMAGE_TAG ./MatchResultFrontend
         docker push ghcr.io/feher-kristof1/matchresult-frontend:$IMAGE_TAG
 
     - name: Build and push backend
       run: |
-        docker build -t ghcr.io/feher-kristof1/matchresult-backend:$IMAGE_TAG ./MatchResultBackend
+        docker build -f ./MatchResultBackend/Dockerfile -t ghcr.io/feher-kristof1/matchresult-backend:$IMAGE_TAG ./MatchResultBackend
         docker push ghcr.io/feher-kristof1/matchresult-backend:$IMAGE_TAG
 
     - name: Update deployment.yaml image tags
