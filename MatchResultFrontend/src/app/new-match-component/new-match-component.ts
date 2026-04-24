@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-new-match-component',
-  imports: [FormControl],
+  imports: [FormsModule],
   templateUrl: './new-match-component.html',
   styleUrl: './new-match-component.css',
 })
